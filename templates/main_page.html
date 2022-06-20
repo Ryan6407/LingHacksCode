@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(207, 245, 198);
+                margin-top: 550px;
+                }
+
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color: black;
+                position: absolute;
+                left: 550px;
+                top: -5px;
+            }
+
+            h2{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 300px;
+                top: 200px;
+            }
+
+            h3{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(35, 211, 208)
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 25px;
+                color: rgb(51, 201, 121);
+                left: 50px;
+                position: absolute;
+            }
+
+            h5 {
+                text-align: center;
+                font-size: 25px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 450px;
+                top: 70px;
+            }
+
+            h6{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 300px;
+                top: 270px;
+            }
+
+            h7{
+                text-align: center;
+                font-size: 45px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 320px;
+                top: 550px;
+            }
+
+            h8{
+                font-size: 45px;
+                color: rgb(8, 47, 37);
+            }
+
+            h9{
+                text-align: center;
+                font-size: 25px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 200px;
+                top: 1020px;
+            }
+
+            h10{
+                text-align: center;
+                font-size: 25px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 200px;
+                top: 1080px;
+            }
+
+            h11{
+                text-align: center;
+                font-size: 35px;
+                color: rgb(8, 47, 37);
+                position: absolute;
+                left: 425px;
+                top: 950px;
+            }
+
+            input[type=submit] {
+                width: 45%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 13px 20px;
+                margin: 100px -420px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=text], select {
+                width: 45%;
+                padding: 12px 20px;
+                margin: -20px -370px;
+                display: inline-block;
+                border: 1px solid rgb(116, 109, 109);
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit]:hover{
+                color:rgb(9, 22, 60);
+                background-color: #4bab8e;
+            }
+
+            .sidenav{
+                height: 100%;
+                width: 300px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: rgb(142, 212, 153);
+                overflow-x: hidden;
+                padding-top: 20px;
+                border: solid 10px rgb(61, 203, 144);
+            }
+
+            .button{
+                color: rgb(1, 93, 61);
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 50px;
+                position: absolute;
+            }
+
+            .button1{
+                bottom: 800px;
+                left: 70px;
+            }
+
+            .button2{
+                bottom: 475px;
+                left: 40px;
+            }
+
+            .button3{
+                bottom: 150px;
+                left: 60px;
+            }
+
+            .button6{
+                top: 1850px;
+                left: 300px;
+            }
+
+            .button5{
+                top: 2000px;
+                left: 300px;
+            }
+
+            .button4{
+                bottom: 750px;
+                left: 60px;
+                color: rgb(26, 78, 59);
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 50px;
+                position: absolute;
+            }
+
+            .button:hover{
+                background-color: rgb(120, 212, 153);
+                color: rgb(38, 142, 64)
+            }
+
+            .button:active {
+                background-color: #734bab;
+                box-shadow: 0 5px rgb(13, 96, 151);
+                transform: translateY(4px);
+                }
+
+            table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 50%;
+                    left: 250px;
+                    position: absolute;
+                    border-color: #0c3f20;
+                    top: 650px;
+                }
+
+            td {
+                border: 2px solid #046929;
+                text-align: left;
+                padding: 8px;
+                width: 2%;
+                color: #0e5f2d;
+            }
+
+            th {
+                border: 2px solid #0c3f20;
+                text-align: left;
+                padding: 8px;
+                width: 2%;
+                color:rgb(2, 91, 39)
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 60%;
+                height: 25px;
+                background: #2cef56;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                position: absolute;
+                }
+
+            .slider:hover {
+            opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #1e712d;
+            cursor: pointer;
+            border-radius: 50%;
+            }
+
+            .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #1e712d;
+            cursor: pointer;
+            }
+
+            .slider1{
+                top: 990px;
+                left: 200px;
+            }
+
+            .slider2{
+                top: 1050px;
+                left: 200px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Article Insights</h1>
+        <h5>Gain Important Insights From An Article You Are Reading</h5>
+        <br>
+        <h2>URL:</h2>
+        <br>
+        <h6>Number Of Similar Articles:</h6>
+        <form method="POST">
+            <input type="text" name="url_input" style="top:300px;position:absolute;left:670px" placeholder="enter url">
+            <input type="text" name="num_sites" style="top:410px;position:absolute;left:670px" placeholder="enter the number of similar articles">
+            <input type="submit" style="top:350px;position:absolute;left:720px">
+        </form>
+        <h7>{{ title }}</h7>
+        <table>
+            <tr>
+                {% for col in columns %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in data_values %}
+            <tr>
+                {% for col, row2 in zip(columns, row) %}
+                <td>{{row2}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        {% if title %}
+            <form action="/visuals" method="POST">
+                <center><a href="/visuals" class="button button5">Gain Further Visual Analysis For Your Article</a></center>
+                <br>
+                <br>
+            </form>
+            <form action="/further_insight" method="POST">
+                <center><a href="/further_insight" class="button button6">Understand More About Your Article</a></center>
+                <br>
+                <br>
+            </form>
+            <h11>Major Topics In Similar Articles Provided Above:</h11>
+            <img src="{{url_for('static', filename='foo2.png')}}" style="top:1020px;position:absolute;left:350px">
+        {% endif %}
+        <!-- {% if title %}
+            <div class="row" style="position:absolute;top:1000px;background-color: rgb(207, 245, 198)">
+                <div class="column">
+                    <img src="{{url_for('static', filename='foo.png')}}">
+                </div>
+            </div>
+        {% endif %} -->
+        <div class="sidenav">
+            <form action="/about" method="POST">
+                <center><a href="/about" class="button button1">About</a></center>
+            </form>
+            <form action="/methods" method="POST">
+                <center><a href="/methods" class="button button2">Methods</a></center>
+            </form>
+            <form action="/future_ideas" method="POST">
+                <center><a href="/future_ideas" class="button button3">Future <br> Ideas</a></center>
+            </form>
+        </div>
+        <script>
+            var slider1 = document.getElementById("layerRange");
+            var output1 = document.getElementById("layerCount"); 
+
+            output1.innerHTML = slider1.value;
+
+            slider1.oninput = function() {
+                output1.innerHTML = this.value
+            }
+
+            var slider2 = document.getElementById("headRange");
+            var output2 = document.getElementById("headCount"); 
+
+            output2.innerHTML = slider2.value;
+
+            slider2.oninput = function() {
+                output2.innerHTML = this.value
+            }
+        </script>
+
+    </body>
+</html>

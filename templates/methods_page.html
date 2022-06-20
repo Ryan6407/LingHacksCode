@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(207, 243, 164);
+                }
+                
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color: black
+            }
+
+            h2{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(18, 4, 91)
+            }
+        </style>
+
+        <h1>Methods Page</h1>
+        <br>
+        <h2>Many NLP methods and techniques were used in this website, which will be outlined here. The first technique was text similarity which is used to generate links that are close to the original provided link. Transformers, which are the current state of the art in NLP, output contextual embeddings that capture the meaning of text in vector form. Using a prexisting dataset on 190k+ articles, we can compare the embeddings of these articles, and the provided article, and see which achieves the highest cosine similarity. The article that has the highest cosine similarity with the original article is displayed. Currently the transformer model ROBERTA is amongst the best performing transformers for capturing textual meaning. The problem however, with using this pretrained model, is that it is very good for capturing the meaning of general english text. This is because Facebook (the company that trained it) trained it on a large english corpus, with all sorts of text. This makes it great for general text, but not optimal for article text, as articles tend to me much longer, and use more advanced vocabularies. Therefore, I pretrained ROBERTA on my own specific data, so that it will have high understanding for article related text. This allows it to achieve high performance on matching similar articles for the provided urls. One additional note is that I chose to use a variant of ROBERTA named Distil-ROBERTA. This is due to the fact that Distil-Roberta is a lite version of ROBERTA, making it significantly faster, and more light weight. I believe that it is worth sacrificing some accuracy for much faster inference time in a webpage situation. In the dataset, we also have corresponding tags for each article, allowing for visualizations like the wordcloud. Another benefit of transformers is that their intermediate layers have attention layers. Attention layers are a series of weighted networks, with a final softmax layer. This converts any vector into 0-1 probability like values. We can then use these values to assign word relationships for the text.</h2>
+    </head>
+</html>

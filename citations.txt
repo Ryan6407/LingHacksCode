@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into-a-existing-flask-html-table
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round

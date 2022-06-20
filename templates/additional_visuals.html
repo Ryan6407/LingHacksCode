@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(172, 234, 143);
+                }
+
+            h1{
+                text-align: center;
+                font-size: 60px;
+                color: black
+            }
+
+            h2{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(18, 4, 91)
+            }
+
+            h3{
+                text-align: center;
+                font-size: 20px;
+                color: rgb(0, 0, 0);
+            }
+
+            input[type=submit] {
+                width: 45%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 13px 20px;
+                margin: 100px -420px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=text], select {
+                width: 45%;
+                padding: 12px 20px;
+                margin: -20px -370px;
+                display: inline-block;
+                border: 1px solid rgb(116, 109, 109);
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit]:hover{
+                color:rgb(9, 22, 60);
+                background-color: #4bab8e;
+            }
+        </style>        
+    <h1>Text Summarization And Feature Extraction:</h1>
+    <h3>The Goal Of This Page Is To Find The Most Important Sentences And Phrases For The Article Provided</h3>
+    <form method="POST">
+        <input type="text" name="displayNumber" style="top:250px;position:absolute;left:870px" placeholder="Enter the number of important sentences you would like displayed">
+        <input type="submit" style="top:200px;position:absolute;left:920px">
+        <div style="position:absolute;top:400px">
+        {% for sent in important_sents %}
+            <h3><br>{{sent}}<br></h3>
+        {% endfor %}
+
+        <br>
+        {% if important_sents %}
+            <h2>Named Entities And Their Occurences:</h2>
+        {% endif %}
+        <br>
+
+        {% for ent in all_entities %}
+            <h3><br>Phrase: {{ent[0]}} | Number of Occurences: {{ent[1]}}<br></h3>
+        {% endfor %}
+        </div>
+    {% if important_sents %}
+        <div style="top:350px;position:absolute;left:790px"><h2>Important Sentences:</h2></div>
+    {% endif %}
+    </form>
+    </head>
+</html>
